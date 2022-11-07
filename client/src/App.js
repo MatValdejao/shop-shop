@@ -14,6 +14,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Success from './pages/Success';
 import { StoreProvider } from "./utils/GlobalState";
 import OrderHistory from './pages/OrderHistory';
 
@@ -44,12 +45,13 @@ function App() {
 					<StoreProvider>
 						<Nav />
 						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route exact path="/login" component={Login} />
-							<Route exact path="/signup" component={Signup} />
-							<Route exact path="/orderHistory" component={OrderHistory} />
-							<Route exact path="/products/:id" component={Detail} />
-							<Route component={NoMatch} />
+								<Route exact path="/" component={Home} />
+								<Route exact path="/login" component={Login} />
+								<Route exact path="/signup" component={Signup} />
+								<Route exact path="/orderHistory" component={OrderHistory} />
+								<Route exact path="/products/:id" component={Detail} />
+								<Route component={NoMatch} />
+              <Route path="/success" component={Success} />
 						</Switch>
 					</StoreProvider>
 				</div>
